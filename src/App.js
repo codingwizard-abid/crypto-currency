@@ -1,10 +1,12 @@
-import React from 'react'
+import React from 'react';
+import {Routes, Route} from "react-router-dom";
+import Homepage from './components/Homepage/Homepage';
 
 const App = () => {
   return (
-    <div>
-      <h1>Crypto Cafe Starter Template</h1>
-    </div>
+    <Routes>
+      <Route path='/' element={<Homepage/>}></Route>
+    </Routes>
   )
 }
 
