@@ -1,13 +1,23 @@
-import React from 'react';
-import {Routes, Route} from "react-router-dom";
-import Homepage from './components/Homepage/Homepage';
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import About from "./components/About/About";
+import Coins from "./components/Coins/Coins";
+import Contact from "./components/Contact/Contact";
+import Header from "./components/Header/Header";
+import Homepage from "./components/Homepage/Homepage";
 
 const App = () => {
-  return (
-    <Routes>
-      <Route path='/' element={<Homepage/>}></Route>
-    </Routes>
-  )
-}
+   return (
+      <div>
+        <Header></Header>
+         <Routes>
+            <Route path="/" element={<Homepage />}></Route>
+            <Route path="/coins" element={<Coins></Coins>}></Route>
+            <Route path="/contact" element={<Contact></Contact>}></Route>
+            <Route path="/about" element={<About></About>}></Route>
+         </Routes>
+      </div>
+   );
+};
 
-export default App
+export default App;
